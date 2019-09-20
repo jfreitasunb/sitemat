@@ -26,22 +26,38 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+			<div class="left">
 			<?php
-			the_custom_logo();
+				$image_attributes = wp_get_attachment_image_src( $attachment_id = 5,'full' );
+				if ( $image_attributes ) : ?>
+					      <div class="logo">
+                        <a href="/" title=""><img src="<?php echo $image_attributes[0]; ?>" alt=""></a>
+                      </div>  
+				<?php endif; ?>
+                
+                </div>
+                <div class="right">
+			<?php
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="row row-title"  style='width: 550px'>
+				<h1 class="site-title" style="text-align: center;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+
+				<p class="site-title" style="text-align: center;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			
 				<?php
 			endif;
+
 			$site_mat_unb_description = get_bloginfo( 'description', 'display' );
 			if ( $site_mat_unb_description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo $site_mat_unb_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
+			</div>
+		</div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

@@ -983,3 +983,27 @@ object {
 .gallery-caption {
 	display: block;
 }
+h1 a{
+   text-decoration:none;
+   color:#00427e;
+}
+.row-title{
+	width:600px;
+	float:left;
+}
+.left{
+	width:250px;
+	float:left;
+}
+.right{
+	width: 750px;
+	float:right;
+}
+.logo{
+	margin:15px 15px 10px 25px;
+}
+.site-header{
+	width: 1000px;
+	margin:0 auto;
+	padding:0;
+}
