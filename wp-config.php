@@ -13,20 +13,20 @@
  * * Prefixo do banco de dados
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/pt-br:Editando_wp-config.php
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
 
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'sitematwp' );
+define( 'DB_NAME', 'site_novo_mat-wp' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'sitemat' );
+define( 'DB_USER', 'site_novo_mat-wp' );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', 'vagrant' );
+define( 'DB_PASSWORD', 'estudos' );
 
 /** Nome do host do MySQL */
 define( 'DB_HOST', 'localhost' );
@@ -35,7 +35,7 @@ define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8mb4' );
 
 /** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
-define('DB_COLLATE', '');
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Chaves únicas de autenticação e salts.
@@ -50,14 +50,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '}BykQAV*+Qq^aH$w7nUTgLQ{~}M5aFE.HCOT5*l>J_,dFzl!t3jP%G^KWUQ}_NKw' );
-define( 'SECURE_AUTH_KEY',  'aT6l!=oq-[0}7S%(YEGUw,/G0=?Vlx?Ch}a,3VSNlr:/^@wUe@5if`B/%bqh>{QB' );
-define( 'LOGGED_IN_KEY',    '.Pdz]!sSHj#s~D[]a@R7ndc&(T(W~55KY4)?!zkfbR-xuyQ/(F|f(W^e4Fbs-}DQ' );
-define( 'NONCE_KEY',        '?;+AsSGBK?#guK~@hV@,L1$yoIFK:IhSh-OhoN^Qo3qdNKI- %8j:x>]geX53wGa' );
-define( 'AUTH_SALT',        '^5#4^5,/_zlrndXMN02u(})ub~| P2-M?y* eTAKLBfBM]-XnX&1Uw{y+,:9:KK2' );
-define( 'SECURE_AUTH_SALT', '^cH&^^qZLU9=ZREq8(t4OXY_M]/&AEm8k`3Km-KMb/FJ5OlK.!NN;!K|5|WMfA-g' );
-define( 'LOGGED_IN_SALT',   'w:MmS$r)ZC#ME`iN[8K;!Dys Lj8S]d5/5}c1m+iy;9e]xsR(Z[%#-oW(N*sOb:&' );
-define( 'NONCE_SALT',       'URe^V Bd:;Ot)3#KGbxx4pF!4}jsfFUT goEndW6L%.NVlF{ULQa/+dgwit x#6K' );
+define( 'AUTH_KEY',         '=VBBX>k][S`V.6OQVW9SV)Tvw`-9;U}qTek-,XlpR!){ivND;_w:{P|#<Y)eI ?D' );
+define( 'SECURE_AUTH_KEY',  'h7qD08n+mE+:2h:GtN&=kbQ(cB4|=BLrCD+hK*_3sey#;DuZhn//ql`8B4WV>Z4?' );
+define( 'LOGGED_IN_KEY',    '7fgI~(LlyZ6{xA&>J31x`Jz}ZwM=V_i#8?:w?hn5Yf6:8}*7n]He,LbIRh|p|*a ' );
+define( 'NONCE_KEY',        'kHTMMm`GYENq)kp(v:nmfVXOq%tNI9rvcQ1X-,n$toyj:&e}LqEzRdA-K<|IoCU:' );
+define( 'AUTH_SALT',        '+7LzBt;$i`MnFX0g;Fq$d^>aw4d/vlvRP M6e 6&%uH#[s8>YP2*eCB9uz{C9}3g' );
+define( 'SECURE_AUTH_SALT', '4DE<,HYHCcmi?<BZo&FU]s`N/x;Q.)h_KwA!NV1At/%|/]Yz5+G_cJ>SS.n5*,)!' );
+define( 'LOGGED_IN_SALT',   '.k4{0B(SIPoi!)/JI!#:?!r^/_kA!W`p?u;J5*q]xvEA|3dz+,IQO12[rLo ptDO' );
+define( 'NONCE_SALT',       '_IQ#ejug[H0K0}ebG4+rR(m4aEUuWXFVPt,9hV[#Y4pv,%{YA>Tf^Ul;|lq4R7<G' );
 
 /**#@-*/
 
@@ -67,7 +67,7 @@ define( 'NONCE_SALT',       'URe^V Bd:;Ot)3#KGbxx4pF!4}jsfFUT goEndW6L%.NVlF{ULQ
  * Você pode ter várias instalações em um único banco de dados se você der
  * um prefixo único para cada um. Somente números, letras e sublinhados!
  */
-$table_prefix = 'smwp_';
+$table_prefix = 'wp_';
 
 /**
  * Para desenvolvedores: Modo de debug do WordPress.
@@ -80,15 +80,17 @@ $table_prefix = 'smwp_';
  * Para informações sobre outras constantes que podem ser utilizadas
  * para depuração, visite o Codex.
  *
- * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG', false );
 
 /* Isto é tudo, pode parar de editar! :) */
 
 /** Caminho absoluto para o diretório WordPress. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
 
 /** Configura as variáveis e arquivos do WordPress. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once ABSPATH . 'wp-settings.php';
+
